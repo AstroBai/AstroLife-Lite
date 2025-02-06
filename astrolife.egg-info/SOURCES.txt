@@ -1,0 +1,6 @@
+setup.py
+astrolife.egg-info/PKG-INFO
+astrolife.egg-info/SOURCES.txt
+astrolife.egg-info/dependency_links.txt
+astrolife.egg-info/entry_points.txt
+astrolife.egg-info/top_level.txt

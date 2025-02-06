@@ -1,0 +1,2 @@
+[console_scripts]
+astrolife = astrolife:main

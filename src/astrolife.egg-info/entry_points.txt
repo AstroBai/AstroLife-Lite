@@ -1,0 +1,2 @@
+[console_scripts]
+astrolife = main:main_entry

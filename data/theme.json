@@ -1,0 +1,248 @@
+{
+    "defaults": {
+        "colours": {
+            "normal_bg": "#f5f7fa80",
+            "hovered_bg": "#d0d7de80",
+            "disabled_bg": "#e0e5ec80",
+            "selected_bg": "#a0a8b080",
+            "dark_bg": "#24292e80",
+            "normal_text": "#333333",
+            "hovered_text": "#000000",
+            "selected_text": "#ffffff",
+            "disabled_text": "#888888",
+            "link_text": "#0056b3",
+            "link_hover": "#003d7a",
+            "link_selected": "#00274d",
+            "text_shadow": "#777777",
+            "normal_border": "#e1e4e8",
+            "hovered_border": "#c0c6cc",
+            "disabled_border": "#d0d5da",
+            "selected_border": "#0056b3",
+            "active_border": "#0056b3",
+            "filled_bar": "#4CAF50",
+            "unfilled_bar": "#CCCCCC"
+        }
+    },
+    "button": {
+        "colours": {
+            "normal_bg": "#f5f7fa20",
+            "hovered_bg": "#d0d7de80",
+            "active_bg": "#a0a8b080",
+            "normal_text": "#F8F9F9",
+            "normal_border": "#c7ab9f"
+        },
+        "misc": {
+            "shape": "rounded_rectangle",
+            "shape_corner_radius": "10",
+            "border_width": "5"
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 26,
+            "color": "#333333"
+        }
+    },
+
+    "#button_black": {
+        "colours": {
+            "normal_bg": "#f5f7fa20",
+            "hovered_bg": "#708090",
+            "active_bg": "#a0a8b080",
+            "normal_text": "black",
+            "normal_border": "#c7ab9f"
+        },
+        "misc": {
+            "shape": "rounded_rectangle",
+            "shape_corner_radius": "5",
+            "border_width": "2"
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 26,
+            "color": "#333333"
+        }
+    },
+
+    "#button_white": {
+        "colours": {
+            "normal_bg": "#24292e80",
+            "hovered_bg": "#708090",
+            "active_bg": "#a0a8b080",
+            "normal_text": "white",
+            "normal_border": "#e1e4e820"
+        },
+        "misc": {
+            "shape": "rounded_rectangle",
+            "shape_corner_radius": "5",
+            "border_width": "2"
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 26,
+            "color": "#333333"
+        }
+    },
+    
+    "#button_calender": {
+        "colours": {
+            "normal_bg": "#f5f7fa20",
+            "hovered_bg": "#90EE90",
+            "active_bg": "#90EE90",
+            "selected_bg": "#90EE90",
+            "normal_text": "white",
+            "normal_border": "#696969"
+        },
+        "misc": {
+            "shape": "rounded_rectangle",
+            "shape_corner_radius": "5",
+            "border_width": "1"
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 26
+        }
+    },
+    "@character_buttons": {
+        "colours": {
+            "normal_bg": "#f5f7fa20",
+            "hovered_bg": "#d0d7de80",
+            "active_bg": "#a0a8b080",
+            "normal_text": "#F8F9F9",
+            "normal_border": "#e1e4e820"
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 26,
+            "color": "#333333"
+        }
+    },
+
+    "label": {
+        "colours": {
+            "normal_text": "#F8F9F9"
+
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 26
+        }
+    },
+
+    "#label_black": {
+        "colours": {
+            "normal_text": "black"
+
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 26
+        }
+    },
+
+    "selection_list":{
+        "colours":{
+            "dark_bg": "#24292e",
+            "normal_border": "#999999"
+         },
+
+        "misc":{
+            "list_item_height": "60"
+        }
+    },
+
+    "drop_down_menu": {
+        "colours":{
+            "dark_bg": "#24292e80"
+         },
+        
+        "misc": {
+            "shape": "rounded_rectangle",
+            "shape_corner_radius": "5",
+            "border_width": "2" 
+        }    
+    },
+    "horizontal_slider": {
+        "colours":{
+            "dark_bg": "#24292e80"
+         },
+        "misc": {
+            "shape": "rounded_rectangle",
+            "shape_corner_radius": "5",
+            "border_width": "2" 
+        }   
+    },
+    "text_box": {
+        "misc": {
+            "shape": "rounded_rectangle",
+            "shape_corner_radius": "5",
+            "border_width": "2" 
+        } ,
+        "colours": {
+            "normal_text": "white"
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 26
+        }  
+    },
+    "text_entry_line": {
+        "misc": {
+            "shape": "rounded_rectangle",
+            "shape_corner_radius": "5",
+            "border_width": "2" 
+        } ,
+        "colours": {
+            "normal_text": "white"
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 26
+        }  
+    },
+    "progress_bar": {
+        "misc": {
+            "shape": "rounded_rectangle",
+            "shape_corner_radius": "5",
+            "border_width": "2" 
+        } ,
+        "colours": {
+            "normal_text": "white",
+            "filled_bar": "#3CB371",
+            "unfilled_bar": "#24292e"
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 26
+        }  
+    },
+    "#progress_bar_blue": {
+        "misc": {
+            "shape": "rounded_rectangle",
+            "shape_corner_radius": "5",
+            "border_width": "2" 
+        } ,
+        "colours": {
+            "normal_text": "white",
+            "filled_bar": "#4169E1",
+            "unfilled_bar": "#24292e"
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 26
+        }  
+    },
+    "#message": {
+        "misc": {
+            "shape": "rounded_rectangle",
+            "shape_corner_radius": "5",
+            "border_width": "2" 
+        } ,
+        "colours": {
+            "normal_text": "white"
+        },
+        "font": {
+            "name": "freesansbold",
+            "size": 18
+        }  
+    }
+}
