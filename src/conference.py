@@ -24,6 +24,7 @@ class Conference:
         self.preparing = False
         self.date_end = 0
         self.time_remind = 7
+        self.requirement_confirmed = 0
 
         
             
@@ -156,14 +157,14 @@ class Conference:
                     self.current_level = player.galaxy
                 elif self.selected_field == 'Cosmology':
                     self.current_level = player.comsology
-                if player.achievements >= self.requirement and self.current_level >= self.level:
-                    self.reward = self.level * random.random() + player.achievements - self.requirement
+                if player.achievements >= self.requirement_confirmed and self.current_level >= self.level:
+                    self.reward = self.level * random.random() + player.achievements - self.requirement_confirmed
                     player.reputation += self.reward
                     self.message.update(time_delta, day, f'Congratulations! You have earned {self.reward} reputation points for attending {self.select_field.selected_option[1]} Conference.')
                 else:
                     self.message.update(time_delta, day, f'Sorry, you have not met the requirements to attend {self.select_field.selected_option[1]} Conference.')  
             elif self.time*7 - (self.date_end - date) >= self.time_remind:
-                self.message.update(time_delta, day, f'You have {int(self.time - self.time_remind/7)} weeks left to attend {self.select_field.selected_option[1]} Conference.')
+                self.message.update(time_delta, day, f'You have {int(self.time - self.time_remind/7)} weeks left to attend {self.select_field.selected_option[1]} Conference. Your target achievements is {self.requirement_confirmed}.')
                 self.time_remind += 7
              
            
@@ -179,6 +180,7 @@ class Conference:
             player.funding -= self.charge
             self.message.update(time_delta, day, f'Start preparing for {self.select_field.selected_option[1]} Conference in {self.time} weeks.')
             self.date_end = date + self.time*7
+            self.requirement_confirmed = self.requirement
             
         return conference
                             
