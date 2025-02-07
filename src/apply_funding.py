@@ -14,7 +14,7 @@ class ApplyFunding:
         self.screen_length = self.screen.get_width()
         self.screen_height = self.screen.get_height()
         self.icon_scale = self.screen.get_height() * 0.05
-        
+        self.message = message
         self.application_frame = pygame.image.load(os.path.join(src_loc,'../assets/images/application.png'))
         self.possibility = 0
         self.applied = False
@@ -153,8 +153,10 @@ class ApplyFunding:
             if random_num < self.possibility:
                 player.funding += self.amount
                 self.info_box.set_text(f'<p>Congratulations! Your application has been successful. You have been awarded ${self.amount:.2f}. The next funding period will start in {self.duration} weeks.</p>')
+                self.message.update(time_delta, day, f'<p>Congratulations! Your application has been successful. You have been awarded ${self.amount:.2f}. The next funding period will start in {self.duration} weeks.</p>')
             else:
                 self.info_box.set_text(f'<p>Unfortunately, your application has not been successful. You have not been awarded any funding. The next funding period will start in {self.duration} weeks.</p>')
+                self.message.update(time_delta, day, f'<p>Unfortunately, your application has not been successful. You have not been awarded any funding. The next funding period will start in {self.duration} weeks.</p>')
                 
                 
             

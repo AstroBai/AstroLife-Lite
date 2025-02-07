@@ -160,6 +160,7 @@ class Conference:
                 if player.achievements >= self.requirement_confirmed and self.current_level >= self.level:
                     self.reward = self.level * random.random() + player.achievements - self.requirement_confirmed
                     player.reputation += self.reward
+                    self.reward = round(self.reward,2)
                     self.message.update(time_delta, day, f'Congratulations! You have earned {self.reward} reputation points for attending {self.select_field.selected_option[1]} Conference.')
                 else:
                     self.message.update(time_delta, day, f'Sorry, you have not met the requirements to attend {self.select_field.selected_option[1]} Conference.')  
