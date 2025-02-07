@@ -2,7 +2,7 @@ import random
 import numpy as np
 import json
 import os
-
+import time
 class Player:
     def __init__(self, name='Player', is_human=True):
         self.name = name
@@ -33,54 +33,8 @@ class Player:
         self.desi = self.save_data['desi']
         self.lsst = self.save_data['lsst']
         self.euclid = self.save_data['euclid']
-
-    #==========================================================================================
-    # actions
-    def observe(self, silence=False):
-        result = random.random() * self.telescope
-        self.observations += result
-        self.funding -= random.gauss(100, 10) * self.telescope
-        if not silence:
-            print(f"{self.name} completed an observation with result: {result}")
-
-    def research(self, silence=False):
-        if not self.observations:
-            if not silence:
-                print(f"{self.name} has no data for research.")
-            return
-        result = self.observations
-        self.observations = 0
-        self.achievements += max(result * random.gauss(1, 0.3), 0)
-        self.funding -= random.gauss(100, 10) * result
-        if not silence:
-            print(f"{self.name}'s research have result: {result}")
-
-    def design_telescope(self, silence=False):
-        self.funding -= random.gauss(100, 10) * 10 ** (self.telescope - 1)
-        new_efficiency = self.telescope * random.gauss(1.1, 0.1)
-        self.telescope = new_efficiency
-        if not silence:
-            print(f"{self.name} designed a new telescope with efficiency: {new_efficiency}")
-
-    def apply_funding(self, silence=False):
-        if self.reputation == 0 or self.achievements == 0:
-            if not silence:
-                print(f"{self.name} cannot apply for funding with zero reputation or achievements.")
-            return
-        funding_received = random.gauss(1000, 100) * np.sqrt(self.reputation) * np.sqrt(self.achievements) / self.credit
-        self.credit *= 1.1
-        self.funding += funding_received
-        if not silence:
-            print(f"{self.name} received funding: {funding_received}")
-
-    def attend_conference(self, silence=False):
-        reputation_received = random.random() * np.sqrt(self.achievements) / self.credit
-        self.credit *= 1.1
-        self.reputation += reputation_received
-        self.funding -= random.gauss(10, 1)
-        if not silence:
-            print(f"{self.name} received reputation: {reputation_received}")
-
+        self.save_start_time = time.time()
+        
     #==========================================================================================
     def get_state(self):
         return [self.funding, self.reputation, self.observations, self.telescope, self.achievements, self.credit]
@@ -164,3 +118,11 @@ class Player:
         
         with open(self.save_file, 'w') as file:
             json.dump(self.save_data, file)
+            
+            
+    def auto_save(self):
+        """Save the game state every 1 minute."""
+        if time.time() - self.save_start_time > 60:
+            self.save_game()
+            self.save_start_time = time.time()
+        
