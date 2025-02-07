@@ -211,7 +211,7 @@ class Shop:
     def update(self, time_delta, player):
         self.manager.update(time_delta)    
         self.upgrade_telescope.set_text(f'${self.upgrade_price}')
-        self.funding_number_label.set_text(f'{self.funding}')
+        self.funding_number_label.set_text(f'{round(self.funding)}')
         
         self.observation_time_button.enable()  
         self.upgrade_telescope.enable()

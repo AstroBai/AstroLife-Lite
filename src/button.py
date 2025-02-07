@@ -59,8 +59,14 @@ class Button:
             manager=self.manager
         )
         
-        self.exit_button = pygame_gui.elements.UIButton(
+        self.save_button = pygame_gui.elements.UIButton(
             relative_rect=pygame.Rect((init_x, init_y + h_button*7), (self.button_scale_new, h_button)),
+            text='Save',
+            manager=self.manager
+        )
+        
+        self.exit_button = pygame_gui.elements.UIButton(
+            relative_rect=pygame.Rect((init_x, init_y + h_button*8), (self.button_scale_new, h_button)),
             text='Exit',
             manager=self.manager
         )
@@ -82,6 +88,7 @@ class Button:
         self.classification.hide()
         self.apply_funding.hide()
         self.exit_button.hide()
+        self.save_button.hide()
         
     def show_all(self):
         self.manage_observations.show()
@@ -92,6 +99,7 @@ class Button:
         self.classification.show()
         self.apply_funding.show()
         self.exit_button.show()
+        self.save_button.show()
         
 
         
