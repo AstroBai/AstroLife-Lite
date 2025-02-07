@@ -2,6 +2,7 @@ import random
 import numpy as np
 import json
 import os
+import time
 class Player:
     def __init__(self, name='Player', is_human=True):
         self.name = name
@@ -32,6 +33,7 @@ class Player:
         self.desi = self.save_data['desi']
         self.lsst = self.save_data['lsst']
         self.euclid = self.save_data['euclid']
+        self.save_start_time = time.time()
         
     #==========================================================================================
     def get_state(self):
@@ -118,4 +120,9 @@ class Player:
             json.dump(self.save_data, file)
             
             
+    def auto_save(self):
+        """Save the game state every 1 minute."""
+        if time.time() - self.save_start_time > 60:
+            self.save_game()
+            self.save_start_time = time.time()
         
