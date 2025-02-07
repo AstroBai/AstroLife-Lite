@@ -25,6 +25,10 @@ Astrolife-Lite is a game made with Python that allows players to act like astron
 
 ### What can players do in AstroLife-Lite?
 
+- Shop: Players can buy items from the shop, such as observation time, upgradings, and telescopes
+
+![Shop](screenshots/shop_window.png)
+
 - Manage Observations: Players can buy observation time in astrolife with their fundings. Then then can manage their observations by marking the date in the calender.
 
 ![Manage Observations](screenshots/manage_observations.png)

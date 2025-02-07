@@ -227,17 +227,17 @@ class Shop:
             self.observation_time_button.disable()  
         if player.funding < self.upgrade_price:    
             self.upgrade_telescope.disable()
-        if player.funding < 10000:     
+        if player.funding < 10000 or player.hst:     
             self.hst_price.disable()
-        if player.funding < 100000:        
+        if player.funding < 100000 or player.jwst:        
             self.jwst_price.disable()
-        if player.funding < 50000:        
+        if player.funding < 50000 or player.lamost:        
             self.lamost_price.disable()
-        if player.funding < 200000:        
+        if player.funding < 200000 or player.desi:        
             self.desi_price.disable()
-        if player.funding < 200000:              
+        if player.funding < 200000 or player.lsst:              
             self.lsst_price.disable()
-        if player.funding < 200000:      
+        if player.funding < 200000 or player.euclid:      
             self.euclid_price.disable() 
             
         
@@ -264,6 +264,42 @@ class Shop:
                 self.upgrade_price = self.upgrade_price * 2 
                 self.message.update(time_delta, day, f'You spent ${self.upgrade_price} to upgrade the telescope.')
         
+        if event_name == self.hst_price:
+            if player.funding >= 10000:
+                player.funding -= 10000
+                player.telescope += 10
+                player.hst = True
+                self.message.update(time_delta, day, f'Your spent $10000 for Hubble Space Telescope.')
+        if event_name == self.jwst_price:
+            if player.funding >= 100000:
+                player.funding -= 100000
+                player.telescope += 50
+                player.jwst = True
+                self.message.update(time_delta, day, f'Your spent $100000 for James Webb Space Telescope.')
+        if event_name == self.lamost_price:
+            if player.funding >= 50000:
+                player.funding -= 50000
+                player.telescope += 20
+                player.lamost = True
+                self.message.update(time_delta, day, f'Your spent $50000 for LAMOST.')
+        if event_name == self.desi_price:
+            if player.funding >= 200000:
+                player.funding -= 200000
+                player.telescope += 100
+                player.desi = True
+                self.message.update(time_delta, day, f'Your spent $200000 for Dark Energy Spectroscopic Instrument.')
+        if event_name == self.lsst_price:
+            if player.funding >= 200000:
+                player.funding -= 200000
+                player.telescope += 100
+                player.lsst = True
+                self.message.update(time_delta, day, f'Your spent $200000 for Large Synoptic Survey Telescope.')
+        if event_name == self.euclid_price:
+            if player.funding >= 200000:
+                player.funding -= 200000
+                player.telescope += 100
+                player.euclid = True
+                self.message.update(time_delta, day, f'Your spent $200000 for Euclid.')
                      
             
         return shopping 

@@ -27,6 +27,12 @@ class Player:
         self.time = self.save_data['time']
         self.classification_index = self.save_data['classification_index']
         self.funding_date = self.save_data['funding_date']
+        self.hst = self.save_data['hst']
+        self.jwst = self.save_data['jwst']
+        self.lamost = self.save_data['lamost']
+        self.desi = self.save_data['desi']
+        self.lsst = self.save_data['lsst']
+        self.euclid = self.save_data['euclid']
 
     #==========================================================================================
     # actions
@@ -109,7 +115,13 @@ class Player:
                               "galaxy": self.galaxy,
                               "cosmology": self.cosmology,
                               "classification_index": self.classification_index,
-                              "funding_date": self.funding_date
+                              "funding_date": self.funding_date,
+                              "hst": self.hst,
+                              "jwst": self.jwst,
+                              "lamost": self.lamost,
+                              "desi": self.desi,
+                              "lsst": self.lsst,
+                              "euclid": self.euclid
                               }
     
     
@@ -137,7 +149,14 @@ class Player:
                               "galaxy": 0,
                               "cosmology": 0,
                               "classification_index": 0,
-                              "funding_date": 0}  # Default save data
+                              "funding_date": 0,
+                              "hst": False,
+                              "jwst": False,
+                              "lamost": False,
+                              "desi": False,
+                              "lsst": False,
+                              "euclid": False
+                              }  # Default save data
             self.save_game()
 
     def save_game(self):
