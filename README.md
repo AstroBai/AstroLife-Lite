@@ -1,6 +1,7 @@
 # AstroLife-Lite v0.1
 
-"Lite" means galaxy images are only part of them.
+This version of AstroLife includes only a small part of galaxy images; one can download the full version by running the download script in the galaxy_image folder.
+ 
 
 ## Usage
 
