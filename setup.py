@@ -11,4 +11,12 @@ setup(
             "astrolife=main:main_entry",
         ],
     },
+    install_requires=[
+        'numpy',
+        'pygame',
+        'pygame_gui',
+        'matplotlib',
+        'glob',
+        'json'
+    ],
 )
