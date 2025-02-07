@@ -234,6 +234,8 @@ class Main:
                         sys.exit()
                     
                     if event.ui_element == self.button.save_button:
+                        time = self.timesys.deltat
+                        self.player.update(time)
                         self.player.save_game()
                     
                     # Manage Observation
