@@ -112,7 +112,7 @@ class ApplyFunding:
                 
     def update(self, time_delta, player, date, day):
         self.manager.update(time_delta)
-        self.amount = float(self.enter_amount.get_text()+1e-5)
+        self.amount = float(self.enter_amount.get_text())+1e-5
         self.duration = self.select_duration.selected_option[0]
         if self.duration == '10 Weeks':
             self.duration = 10
