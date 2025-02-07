@@ -97,11 +97,11 @@ class Draw:
         self.draw_text(player_status[6], x_init + x_space*5 + self.icon_scale*0.8, self.panel_height*1.7)
         
     def draw_title(self, player):
-        if player.score < 50:
+        if player.score < 100:
             self.draw_text(f'BSc. {player.name}', self.icon_scale*0.5, self.panel_height*1.7)
-        elif player.score < 100:
+        elif player.score < 1000:
             self.draw_text(f'MSc. {player.name}', self.icon_scale*0.5, self.panel_height*1.7)
-        elif player.score < 200:
+        elif player.score < 10000:
             self.draw_text(f'PhD. {player.name}', self.icon_scale*0.5, self.panel_height*1.7)
         else:
             self.draw_text(f'Prof. {player.name}', self.icon_scale*0.5, self.panel_height*1.7)

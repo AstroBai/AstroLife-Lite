@@ -267,37 +267,37 @@ class Shop:
         if event_name == self.hst_price:
             if player.funding >= 10000:
                 player.funding -= 10000
-                player.telescope += 10
+                player.telescope += 3
                 player.hst = True
                 self.message.update(time_delta, day, f'Your spent $10000 for Hubble Space Telescope.')
         if event_name == self.jwst_price:
             if player.funding >= 100000:
                 player.funding -= 100000
-                player.telescope += 50
+                player.telescope += 8
                 player.jwst = True
                 self.message.update(time_delta, day, f'Your spent $100000 for James Webb Space Telescope.')
         if event_name == self.lamost_price:
             if player.funding >= 50000:
                 player.funding -= 50000
-                player.telescope += 20
+                player.telescope += 4
                 player.lamost = True
                 self.message.update(time_delta, day, f'Your spent $50000 for LAMOST.')
         if event_name == self.desi_price:
             if player.funding >= 200000:
                 player.funding -= 200000
-                player.telescope += 100
+                player.telescope += 10
                 player.desi = True
                 self.message.update(time_delta, day, f'Your spent $200000 for Dark Energy Spectroscopic Instrument.')
         if event_name == self.lsst_price:
             if player.funding >= 200000:
                 player.funding -= 200000
-                player.telescope += 100
+                player.telescope += 10
                 player.lsst = True
                 self.message.update(time_delta, day, f'Your spent $200000 for Large Synoptic Survey Telescope.')
         if event_name == self.euclid_price:
             if player.funding >= 200000:
                 player.funding -= 200000
-                player.telescope += 100
+                player.telescope += 10
                 player.euclid = True
                 self.message.update(time_delta, day, f'Your spent $200000 for Euclid.')
                      
