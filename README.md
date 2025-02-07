@@ -9,6 +9,8 @@ This version of AstroLife includes only a small part of galaxy images; one can d
 
 to install:
 ```
+git clone https://github.com/astrobai/astrolife-lite.git
+cd astrolife-lite
 pip install -e .
 ```
 
