@@ -1,3 +1,7 @@
 Metadata-Version: 2.1
 Name: astrolife
-Version: 1.0
+Version: 0.1
+Requires-Dist: numpy
+Requires-Dist: pygame
+Requires-Dist: pygame_gui
+Requires-Dist: matplotlib

@@ -24,6 +24,9 @@ class Main:
     def __init__(self, username):
         pygame.init()
         src_loc = os.path.dirname(os.path.abspath(__file__))
+        pygame.display.set_caption('AstroLife-Lite v0.1')
+        icon = pygame.image.load(os.path.join(src_loc,'../assets/images/icon.png'))
+        pygame.display.set_icon(icon)
         self.settings = Settings()
         self.settings.set_screen(1280*1.5,800*1.5)      
         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))

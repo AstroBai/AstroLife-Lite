@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="astrolife",
-    version="1.0",
+    version="0.1",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     py_modules=["main"],  
@@ -15,8 +15,6 @@ setup(
         'numpy',
         'pygame',
         'pygame_gui',
-        'matplotlib',
-        'glob',
-        'json'
+        'matplotlib'
     ],
 )

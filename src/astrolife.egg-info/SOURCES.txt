@@ -1,7 +1,9 @@
+README.md
 setup.py
 src/main.py
 src/astrolife.egg-info/PKG-INFO
 src/astrolife.egg-info/SOURCES.txt
 src/astrolife.egg-info/dependency_links.txt
 src/astrolife.egg-info/entry_points.txt
+src/astrolife.egg-info/requires.txt
 src/astrolife.egg-info/top_level.txt
