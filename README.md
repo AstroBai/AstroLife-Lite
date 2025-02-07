@@ -1,5 +1,7 @@
 # AstroLife-Lite v0.1
 
+![logo](assets/images/logo.png)
+
 This version of AstroLife includes only a small part of galaxy images; one can download the full version by running the download script in the galaxy_data folder.
  
 
