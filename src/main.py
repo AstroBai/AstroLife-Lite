@@ -94,7 +94,8 @@ class Main:
             self.date = self.timesys.get_date()
             self.week = self.timesys.get_day()[0]
             self.day = self.timesys.get_day()
-            self.player.auto_save()
+            time = self.timesys.deltat
+            self.player.auto_save(time)
             self.research.update(time_delta,self.player,self.date,self.day)
             self.learn.update(time_delta,self.player,self.date, self.day)
             self.message.update(time_delta,self.day )

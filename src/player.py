@@ -120,9 +120,10 @@ class Player:
             json.dump(self.save_data, file)
             
             
-    def auto_save(self):
+    def auto_save(self, time_):
         """Save the game state every 1 minute."""
         if time.time() - self.save_start_time > 60:
+            self.update(time_)
             self.save_game()
             self.save_start_time = time.time()
         
