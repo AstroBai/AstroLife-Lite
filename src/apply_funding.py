@@ -155,10 +155,10 @@ class ApplyFunding:
             if random_num < self.possibility:
                 player.funding += self.amount
                 self.info_box.set_text(f'<p>Congratulations! Your application has been successful. You have been awarded ${self.amount:.2f}. The next funding period will start in {self.duration} weeks.</p>')
-                self.message.update(time_delta, day, f'<p>Congratulations! Your application has been successful. You have been awarded ${self.amount:.2f}. The next funding period will start in {self.duration} weeks.</p>')
+                self.message.update(time_delta, day, f'Congratulations! Your application has been successful. You have been awarded ${self.amount:.2f}. The next funding period will start in {self.duration} weeks.')
             else:
                 self.info_box.set_text(f'<p>Unfortunately, your application has not been successful. You have not been awarded any funding. The next funding period will start in {self.duration} weeks.</p>')
-                self.message.update(time_delta, day, f'<p>Unfortunately, your application has not been successful. You have not been awarded any funding. The next funding period will start in {self.duration} weeks.</p>')
+                self.message.update(time_delta, day, f'Unfortunately, your application has not been successful. You have not been awarded any funding. The next funding period will start in {self.duration} weeks.')
                 
                 
             
